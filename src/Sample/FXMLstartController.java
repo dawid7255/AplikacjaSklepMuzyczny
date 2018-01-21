@@ -18,20 +18,20 @@ public class FXMLstartController implements Initializable {
 
     @FXML
     private void otworz_plikAction(ActionEvent event) throws IOException {
-        /*try {
+        try {
             Serializacja.WczytajAction();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @FXML
     private void zapisz_plikAction(ActionEvent event) throws IOException {
-        /*try {
+        try {
             Serializacja.ZapiszAction();
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
 
     @FXML
