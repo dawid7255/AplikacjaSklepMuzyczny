@@ -138,7 +138,7 @@ public class FXMLwyswietl_instrumentController implements Initializable {
 
     @FXML
     private void omnieAction(ActionEvent event) throws IOException {
-//        onas.messagebox();
+        onas.messagebox();
     }
 
 
