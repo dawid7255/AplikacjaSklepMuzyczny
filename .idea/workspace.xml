@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1b5c75d-9fc9-4a11-ab70-82ab268faec7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/FXMLwyswietl_instrumentController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/wyswietl_instrument.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/FXMLdodaj_uslugeController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/FXMLwyswietl_uslugiController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/dodaj_usluge.fxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Sample/wyswietl_uslugi.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AplikacjaSklepMuzyczny.iws" />
@@ -29,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FXMLdodaj_instrumentController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FXMLdodaj_instrumentController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_instrumentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2618">
+            <state vertical-scroll-proportion="-2.4285715" vertical-offset="1037" max-vertical-offset="2618">
               <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
@@ -42,7 +44,7 @@
       <file leaf-file-name="Serializacja.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sample/Serializacja.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
+            <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2125">
               <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
@@ -52,7 +54,7 @@
       <file leaf-file-name="FXMLwyswietl_instrumentController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sample/FXMLwyswietl_instrumentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4968" max-vertical-offset="5576">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5576">
               <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,16 +63,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wyswietl_instrument.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wyswietl_instrument.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sample/wyswietl_instrument.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1460674" vertical-offset="408" max-vertical-offset="7072">
+            <state vertical-scroll-proportion="13.6" vertical-offset="408" max-vertical-offset="7072">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="FXMLwyswietl_uslugiController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sample/FXMLwyswietl_uslugiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="2346">
+              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FXMLdodaj_uslugeController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_uslugeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
           </provider>
         </entry>
       </file>
@@ -87,8 +111,8 @@
       <file leaf-file-name="FXMLstartController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sample/FXMLstartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1156">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1156">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -105,6 +129,8 @@
         <option value="$PROJECT_DIR$/src/Sample/FXMLdodaj_instrumentController.java" />
         <option value="$PROJECT_DIR$/src/Sample/FXMLstartController.java" />
         <option value="$PROJECT_DIR$/src/Sample/FXMLwyswietl_instrumentController.java" />
+        <option value="$PROJECT_DIR$/src/Sample/FXMLdodaj_uslugeController.java" />
+        <option value="$PROJECT_DIR$/src/Sample/FXMLwyswietl_uslugiController.java" />
       </list>
     </option>
   </component>
@@ -207,6 +233,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Dokumenty Dawid\Studia\Semestr 5\Przedmioty\5. Inżynieria oprogramowania\AplikacjaSklepMuzyczny\src\Sample" />
       <recent name="D:\Dokumenty Dawid\Studia\Semestr 5\Przedmioty\5. Inżynieria oprogramowania\SklepPawel\AplikacjaSklepMuzyczny\src\Sample" />
     </key>
   </component>
@@ -487,11 +514,12 @@
       <updated>1516559748322</updated>
       <workItem from="1516559748799" duration="1862000" />
       <workItem from="1516653467271" duration="993000" />
+      <workItem from="1516833454426" duration="412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2855000" />
+    <option name="totallyTimeSpent" value="3267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -561,6 +589,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sample/Serializacja.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="2125">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLwyswietl_instrumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4968" max-vertical-offset="5576">
+          <caret line="141" column="5" selection-start-line="141" selection-start-column="5" selection-end-line="141" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/wyswietl_instrument.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7072">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="493">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLstartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1156">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_instrumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2618">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/Serializacja.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -591,26 +672,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLstartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_instrumentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2839">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Sample/Serializacja.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/wyswietl_instrument.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="13.6" vertical-offset="408" max-vertical-offset="7072">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_uslugeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLwyswietl_uslugiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="2346">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -625,15 +719,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sample/wyswietl_instrument.fxml">
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLstartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1460674" vertical-offset="408" max-vertical-offset="7072">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="548" max-vertical-offset="1156">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sample/FXMLdodaj_instrumentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4285715" vertical-offset="1037" max-vertical-offset="2618">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
