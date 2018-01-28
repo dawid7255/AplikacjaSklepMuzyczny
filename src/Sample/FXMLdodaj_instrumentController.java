@@ -8,11 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import static Sample.Serializacja.*;
 
 public class FXMLdodaj_instrumentController implements Initializable {
@@ -50,6 +48,13 @@ public class FXMLdodaj_instrumentController implements Initializable {
     private ObservableList<String> rodzajeNaglosnienia = FXCollections.observableArrayList("Konsola", "Głośnik","Mikrofon");
     private @FXML ComboBox<String> klasaNaglosnienie;
     private ObservableList<String> klasyNaglosnienia = FXCollections.observableArrayList("Domowe", "Estradowe");
+
+    //akcesoria
+    private @FXML TextField nazwaAkcesoria;
+    private @FXML TextField producentAkcesoria;
+    private @FXML TextField cenaAkcesoria;
+    private @FXML ComboBox<String> rodzajAkcesoria;
+    private ObservableList<String> rodzajeAkcesoria = FXCollections.observableArrayList("Gitara", "Klawisze","Perkusja","Nagłośnienie");
 
 
     //funkcje menu
@@ -149,6 +154,15 @@ public class FXMLdodaj_instrumentController implements Initializable {
                 klasaNaglosnienie.getValue()));
     }
 
+    @FXML
+    private void dodajAkcesoriaAction(ActionEvent event) throws IOException{
+        listaAkcesoria.add(new Akcesoria(
+                nazwaAkcesoria.getText(),
+                Float.valueOf(cenaAkcesoria.getText()),
+                producentAkcesoria.getText(),
+                rodzajAkcesoria.getValue()));
+    }
+
     //inicjalizacja ComboBoxa
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -157,5 +171,6 @@ public class FXMLdodaj_instrumentController implements Initializable {
         rodzajPerkusja.setItems(rodzajePerkusji);
         rodzajNaglosnienie.setItems(rodzajeNaglosnienia);
         klasaNaglosnienie.setItems(klasyNaglosnienia);
+        rodzajAkcesoria.setItems(rodzajeAkcesoria);
     }
 }
