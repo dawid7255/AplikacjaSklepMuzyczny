@@ -24,7 +24,8 @@ public class FXMLwyswietl_instrumentController implements Initializable {
     private static ObservableList<Klawisze> wybranyrekordKlawisze, wszystkoKlawisze;
     private static ObservableList<Perkusja> wybranyrekordPerkusja, wszystkoPerkusja;
     private static ObservableList<Naglosnienie> wybranyrekordNaglosnienie, wszystkoNaglosnienie;
-    private int NumerRekorduGitara,NumerRekorduKlawisze, NumerRekorduPerkusja, NumerRekorduNaglosnienie;
+    private static ObservableList<Akcesoria> wybranyrekordAkcesoria, wszystkoAkcesoria;
+    private int NumerRekorduGitara,NumerRekorduKlawisze, NumerRekorduPerkusja, NumerRekorduNaglosnienie, NumerRekorduAkcesoria;
 
     // edycja gitara
     @FXML private TextField nazwaGitara;
@@ -87,6 +88,20 @@ public class FXMLwyswietl_instrumentController implements Initializable {
     private @FXML TableColumn kolumnaNaglosnienieCena;
     private @FXML TableColumn kolumnaNaglosnienieKlasa;
 
+    //edycja akcesoria
+    private @FXML TextField nazwaAkcesoria;
+    private @FXML TextField producentAkcesoria;
+    private @FXML TextField cenaAkcesoria;
+    private @FXML ComboBox<String> rodzajAkcesoria;
+    private ObservableList<String> rodzajeAkcesoria= FXCollections.observableArrayList("Gitara", "Klawisze","Perkusja","Nagłośnienie");
+
+    // tabela perkusji
+    private @FXML TableView tabelaAkcesoria;
+    private @FXML TableColumn kolumnaAkcesoriaRodzaj;
+    private @FXML TableColumn kolumnaAkcesoriaNazwa;
+    private @FXML TableColumn kolumnaAkcesoriaProducent;
+    private @FXML TableColumn kolumnaAkcesoriaCena;
+
     //funkcje menu
     @FXML
     private void STARTAction(ActionEvent event) throws IOException {
@@ -138,7 +153,7 @@ public class FXMLwyswietl_instrumentController implements Initializable {
 
     @FXML
     private void omnieAction(ActionEvent event) throws IOException {
-//        onas.messagebox();
+        onas.messagebox();
     }
 
 
@@ -255,8 +270,34 @@ public class FXMLwyswietl_instrumentController implements Initializable {
         listaNaglosnienie.get(NumerRekorduNaglosnienie).setKlasa(klasaNaglosnienie.getValue());
         //odswiezanie tablicy
         tabelaNaglosnienie.getColumns().clear();
-        tabelaNaglosnienie.getColumns().addAll(kolumnaNaglosnienieRodzaj,kolumnaNaglosnienieNazwa,
-                kolumnaNaglosnienieProducent,kolumnaNaglosnienieCena,kolumnaNaglosnienieKlasa);
+        tabelaNaglosnienie.getColumns().addAll(kolumnaNaglosnienieRodzaj, kolumnaNaglosnienieNazwa,
+                kolumnaNaglosnienieProducent, kolumnaNaglosnienieCena, kolumnaNaglosnienieKlasa);
+    }
+
+    @FXML
+    private void UsunAkcesoriaAction(ActionEvent event) throws IOException {
+        usun(wszystkoAkcesoria,tabelaAkcesoria,wybranyrekordAkcesoria);
+    }
+
+    @FXML
+    private void EdytujAkcesoriaAction() throws IOException {
+        NumerRekorduAkcesoria = tabelaAkcesoria.getSelectionModel().getSelectedIndex();
+        setWybranyrekordAkcesoria(wybranyrekordAkcesoria);
+        nazwaAkcesoria.setText(listaAkcesoria.get(NumerRekorduAkcesoria).getNazwa());
+        producentAkcesoria.setText(listaAkcesoria.get(NumerRekorduAkcesoria).getProducent());
+        cenaAkcesoria.setText(String.valueOf(listaAkcesoria.get(NumerRekorduAkcesoria).getCena()));
+    }
+
+    @FXML
+    private void zatwierdzEdycjeAkcesoriaAction(ActionEvent event) throws IOException {
+        listaAkcesoria.get(NumerRekorduAkcesoria).setNazwa(nazwaAkcesoria.getText());
+        listaAkcesoria.get(NumerRekorduAkcesoria).setProducent(producentAkcesoria.getText());
+        listaAkcesoria.get(NumerRekorduAkcesoria).setCena(Float.valueOf(cenaAkcesoria.getText()));
+        listaAkcesoria.get(NumerRekorduAkcesoria).setRodzaj(rodzajAkcesoria.getValue());
+        //odswiezanie tablicy
+        tabelaAkcesoria.getColumns().clear();
+        tabelaAkcesoria.getColumns().addAll(kolumnaAkcesoriaRodzaj,kolumnaAkcesoriaNazwa,
+                kolumnaAkcesoriaProducent,kolumnaAkcesoriaCena);
     }
 
     @Override
@@ -266,6 +307,7 @@ public class FXMLwyswietl_instrumentController implements Initializable {
         rodzajPerkusja.setItems(rodzajePerkusji);
         rodzajNaglosnienie.setItems(rodzajeNaglosnienia);
         klasaNaglosnienie.setItems(klasyNaglosnienia);
+        rodzajAkcesoria.setItems(rodzajeAkcesoria);
 
         tabelaGitar.itemsProperty().setValue(listaGitar);
         kolumnaGitaraNazwa.setCellValueFactory(new PropertyValueFactory<Gitara, String>("nazwa"));
@@ -294,6 +336,12 @@ public class FXMLwyswietl_instrumentController implements Initializable {
         kolumnaNaglosnienieProducent.setCellValueFactory(new PropertyValueFactory<Naglosnienie, String>("producent"));
         kolumnaNaglosnienieCena.setCellValueFactory(new PropertyValueFactory<Naglosnienie, Float>("cena"));
         kolumnaNaglosnienieKlasa.setCellValueFactory(new PropertyValueFactory<Naglosnienie,String>("klasa"));
+
+        tabelaAkcesoria.itemsProperty().setValue(listaAkcesoria);
+        kolumnaAkcesoriaRodzaj.setCellValueFactory(new PropertyValueFactory<Akcesoria, String>("rodzaj"));
+        kolumnaAkcesoriaNazwa.setCellValueFactory(new PropertyValueFactory<Akcesoria, String>("nazwa"));
+        kolumnaAkcesoriaProducent.setCellValueFactory(new PropertyValueFactory<Akcesoria, String>("producent"));
+        kolumnaAkcesoriaCena.setCellValueFactory(new PropertyValueFactory<Akcesoria, Float>("cena"));
     }
 
     public static ObservableList<Gitara> getWybranyrekordGitara() {
@@ -326,5 +374,12 @@ public class FXMLwyswietl_instrumentController implements Initializable {
 
     public static void setWybranyrekordNaglosnienie(ObservableList<Naglosnienie> wybranyrekordNaglosnienie) {
         FXMLwyswietl_instrumentController.wybranyrekordNaglosnienie = wybranyrekordNaglosnienie;
+    }
+    public static ObservableList<Akcesoria> getWybranyrekordAkcesoria() {
+        return wybranyrekordAkcesoria;
+    }
+
+    public static void setWybranyrekordAkcesoria(ObservableList<Akcesoria> wybranyrekordAkcesoria ) {
+        FXMLwyswietl_instrumentController.wybranyrekordAkcesoria= wybranyrekordAkcesoria;
     }
 }

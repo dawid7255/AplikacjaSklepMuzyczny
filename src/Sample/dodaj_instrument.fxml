@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.FXMLdodaj_instrumentController">
     <children>
         <MenuBar prefWidth="1024.0">
@@ -301,6 +312,60 @@
                               </AnchorPane>
                           </content>
                       </Tab>
+                  <Tab text="Akcesoria">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="29.0" prefHeight="20.0" prefWidth="119.0" text="Rodzaj:" textAlignment="RIGHT">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="66.0" prefHeight="20.0" prefWidth="120.0" text="Nazwa:" textAlignment="RIGHT" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="66.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="106.0" prefHeight="20.0" prefWidth="120.0" text="Producent:" textAlignment="RIGHT" AnchorPane.topAnchor="106.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="146.0" prefHeight="20.0" prefWidth="120.0" text="Cena:" textAlignment="RIGHT">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="nazwaAkcesoria" alignment="CENTER" layoutX="141.0" layoutY="64.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="64.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="producentAkcesoria" alignment="CENTER" layoutX="141.0" layoutY="104.0" promptText="..." AnchorPane.leftAnchor="141.0" AnchorPane.topAnchor="104.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="cenaAkcesoria" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="144.0" promptText="0.00" AnchorPane.topAnchor="144.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="dodajAkcesoria" layoutX="84.0" layoutY="210.0" mnemonicParsing="false" onAction="#dodajAkcesoriaAction" prefHeight="30.0" prefWidth="232.0" text="Dodaj" AnchorPane.leftAnchor="84.0" AnchorPane.topAnchor="210.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="316.0" layoutY="149.0" prefHeight="20.0" prefWidth="120.0" text="PLN" textAlignment="RIGHT" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="149.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="rodzajAkcesoria" layoutX="141.0" layoutY="27.0" prefHeight="25.0" prefWidth="173.0" promptText="Rodzaj" visibleRowCount="4" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
                   </tabs>
               </TabPane>
          </content>

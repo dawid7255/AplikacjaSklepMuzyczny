@@ -23,6 +23,8 @@ public class Serializacja {
 
     public static ObservableList<Naglosnienie> listaNaglosnienie = FXCollections.observableArrayList();
 
+    public static ObservableList<Akcesoria> listaAkcesoria = FXCollections.observableArrayList();
+
     public static ObservableList<Uslugi> listaUslug = FXCollections.observableArrayList();
 
     public static List glownaLista = new ArrayList<>();
@@ -45,6 +47,10 @@ public class Serializacja {
 
         for (int i = 0; i < listaNaglosnienie.size(); i++) {
             glownaLista.add(listaNaglosnienie.get(i));
+        }
+
+        for (int i = 0; i < listaAkcesoria.size(); i++) {
+            glownaLista.add(listaAkcesoria.get(i));
         }
 
         for (int i = 0; i < listaUslug.size(); i++) {
@@ -78,6 +84,7 @@ public class Serializacja {
         listaKlawiszy.clear();
         listaPerkusji.clear();
         listaNaglosnienie.clear();
+        listaAkcesoria.clear();
         listaUslug.clear();
 
         FileChooser OknoOtwieraniaPliku = new FileChooser();
@@ -109,6 +116,9 @@ public class Serializacja {
                 }
                 if (klasa.equals("class Sample.Naglosnienie")) {
                     listaNaglosnienie.add((Naglosnienie) glownaLista.get(i));
+                }
+                if (klasa.equals("class Sample.Akcesoria")) {
+                    listaAkcesoria.add((Akcesoria) glownaLista.get(i));
                 }
                 if (klasa.equals("class Sample.Uslugi")) {
                     listaUslug.add((Uslugi) glownaLista.get(i));
